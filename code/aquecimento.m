@@ -31,5 +31,4 @@ fprintf('Teste 4: OK\n');
 assert(contagem([0 1 0; 0 0 1; 0 0 1]) == 3);
 fprintf('Teste 5: OK\n');
 
-
 fprintf('Sua implementação está correta!\n');

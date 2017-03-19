@@ -1,17 +1,17 @@
 classdef RBTElement < handle
-
-%
-% A class that implements pass by reference elements with numeric keys for
-% instances of the RedBlackTree class
-%
-% NOTE: This class is used internally by the RedBlackTree class
-%
-
+    
+    %
+    % A class that implements pass by reference elements with numeric keys for
+    % instances of the RedBlackTree class
+    %
+    % NOTE: This class is used internally by the RedBlackTree class
+    %
+    
     %
     % Public properties
     %
-	properties (Access = public)
-		key;            % key
+    properties (Access = public)
+        key;            % key
         id;
         left = nan;       % left child
         right = nan;    % right child
@@ -24,14 +24,14 @@ classdef RBTElement < handle
     %
     % Public methods
     %
-	methods (Access = public)
+    methods (Access = public)
         %
         % Constructor
         %
-		function this = RBTElement(key,value)
-    
-          global id;
-			% Initialize key
+        function this = RBTElement(key,value)
+            
+            global id;
+            % Initialize key
             this.key = key;
             this.id = id;
             id = id + 1;
@@ -48,7 +48,7 @@ classdef RBTElement < handle
             bool = isnan(this.key);
         end
         
-       
+        
         function[bool] = eq(this, obj)
             bool = this.id == obj.id;
         end
@@ -59,5 +59,5 @@ classdef RBTElement < handle
         
     end
     
-     
+    
 end

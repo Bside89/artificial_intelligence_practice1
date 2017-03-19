@@ -8,15 +8,14 @@
 % author: raonifst at gmail dot com
 
 function reconstruct_path( node )
-    
-    if ~isempty(node)	
-        if isempty(node.Prev)
-            show(node.State);
-        else
-            reconstruct_path(node.Prev);
-            show(node.State);
-        end
+
+if ~isempty(node)
+    if isempty(node.Prev)
+        show(node.State);
+    else
+        reconstruct_path(node.Prev);
+        show(node.State);
     end
-    
 end
 
+end

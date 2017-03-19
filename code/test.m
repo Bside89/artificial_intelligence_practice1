@@ -4,7 +4,7 @@
 %
 % Script Octave/MATLAB que deve ser utilizado para testar a implementação.
 %
-% author: raonifst at gmail dot com
+% author: bruno403f at gmail dot com
 
 clear
 clc

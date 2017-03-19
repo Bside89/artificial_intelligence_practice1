@@ -9,14 +9,13 @@
 %
 % Para inserir um nó n com prioridade p em uma fila q já criada, faça:
 % q.insert(p, n);
-% 
+%
 % Para remover um nó m com a menor prioridade, é só utilizar a função
 % extracMin assim:
-% 
+%
 % m = q.extractMin();
-% 
+%
 % author: raonifst at gmail dot com
-
 
 classdef PriorityQueue
     properties
@@ -45,4 +44,3 @@ classdef PriorityQueue
     end
     
 end
-

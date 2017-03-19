@@ -2,7 +2,7 @@
 % Instituto de Engenharia
 % Inteligência Artificial - 2016/2
 %
-% Script Octave/MATLAB que deve ser utilizado para testar a implementação 
+% Script Octave/MATLAB que deve ser utilizado para testar a implementação
 % das tarefas extras do exercício.
 % Este arquivo não deve ser alterado.
 %
@@ -11,7 +11,7 @@
 clear
 clc
 
-% Utilizado para comparar objetos - NAO APAGUE! %  
+% Utilizado para comparar objetos - NAO APAGUE! %
 global id;
 id = intmin;
 % %

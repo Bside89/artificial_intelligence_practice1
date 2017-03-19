@@ -10,7 +10,7 @@
 clear
 clc
 
-% Utilizado para comparar objetos - NAO APAGUE! %  
+% Utilizado para comparar objetos - NAO APAGUE! %
 global id;
 id = intmin;
 % %
@@ -33,22 +33,22 @@ for i=1:size(M, 3)
     fprintf('Testando tempo de execução para:');
     S = M(:,:,i)
     fprintf('Aguarde...\n\n');
-
+    
     if i ~= 5
         fprintf('Teste (hamming) iniciado.\n');
         m = astar(S, @hamming);
         assert(m.eq(Node([1 2 3; 4 5 6; 7 8 9], 0)));
         fprintf('Teste (hamming) concluído.\n\n');
     end
-
+    
     fprintf('Teste (manhattan) iniciado.\n');
     m = astar(S, @manhattan);
     assert(m.eq(Node([1 2 3; 4 5 6; 7 8 9], 0)));
     fprintf('Teste (manhattan) concluído.\n\n');
-
+    
     fprintf('Teste (heuristic) iniciado.\n');
     m = astar(S, @heuristic);
     assert(m.eq(Node([1 2 3; 4 5 6; 7 8 9], 0)));
     fprintf('Teste (heuristic) concluído.\n\n');
-
+    
 end

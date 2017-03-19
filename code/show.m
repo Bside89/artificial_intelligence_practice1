@@ -8,20 +8,19 @@
 
 function show( Grid )
 
-    fprintf('\n');
+fprintf('\n');
 
-    for i=1:size(Grid,1)
-        for j=1:size(Grid,2)
-            if Grid(i,j) == 9
-                fprintf('%4s', ' ');
-            else
-                fprintf('%4d', Grid(i,j));
-            end
+for i=1:size(Grid,1)
+    for j=1:size(Grid,2)
+        if Grid(i,j) == 9
+            fprintf('%4s', ' ');
+        else
+            fprintf('%4d', Grid(i,j));
         end
-        fprintf('\n');
     end
-
     fprintf('\n');
-
 end
 
+fprintf('\n');
+
+end

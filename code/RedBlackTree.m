@@ -1,35 +1,35 @@
 classdef RedBlackTree < handle
-%--------------------------------------------------------------------------
-% Class:        RedBlackTree < handle
-%               
-% Constructor:  T = RedBlackTree();
-%               
-% Properties:   (none)
-%               
-% Methods:              T.Insert(key,value);
-%                       T.Delete(x);
-%               key   = T.Sort();
-%               bool  = T.ContainsKey(key);
-%               x     = T.Search(key);
-%               x     = T.Minimum();
-%               y     = T.NextSmallest(x);
-%               x     = T.Maximum();
-%               y     = T.NextLargest(x);
-%               x     = T.Select(i);
-%               r     = T.Rank(x);
-%               count = T.Count();
-%               bool  = T.IsEmpty();
-%                       T.Clear();
-%               
-% Description:  This class implements a red-black binary search tree with
-%               numeric keys and arbitrarily typed values
-%               
-% Author:       Brian Moore
-%               brimoor@umich.edu
-%               
-% Date:         January 16, 2014
-%--------------------------------------------------------------------------
-
+    %--------------------------------------------------------------------------
+    % Class:        RedBlackTree < handle
+    %
+    % Constructor:  T = RedBlackTree();
+    %
+    % Properties:   (none)
+    %
+    % Methods:              T.Insert(key,value);
+    %                       T.Delete(x);
+    %               key   = T.Sort();
+    %               bool  = T.ContainsKey(key);
+    %               x     = T.Search(key);
+    %               x     = T.Minimum();
+    %               y     = T.NextSmallest(x);
+    %               x     = T.Maximum();
+    %               y     = T.NextLargest(x);
+    %               x     = T.Select(i);
+    %               r     = T.Rank(x);
+    %               count = T.Count();
+    %               bool  = T.IsEmpty();
+    %                       T.Clear();
+    %
+    % Description:  This class implements a red-black binary search tree with
+    %               numeric keys and arbitrarily typed values
+    %
+    % Author:       Brian Moore
+    %               brimoor@umich.edu
+    %
+    % Date:         January 16, 2014
+    %--------------------------------------------------------------------------
+    
     %
     % Private properties
     %
@@ -49,7 +49,7 @@ classdef RedBlackTree < handle
         function this = RedBlackTree()
             %----------------------- Constructor --------------------------
             % Syntax:       T = RedBlackTree();
-            %               
+            %
             % Description:  Creates an empty red-black binary search tree
             %--------------------------------------------------------------
             
@@ -63,11 +63,11 @@ classdef RedBlackTree < handle
         function Insert(this,key,value)
             %------------------------- Insert -----------------------------
             % Syntax:       T.Insert(key,value);
-            %               
+            %
             % Inputs:       key is a numeric key
-            %               
+            %
             %               value is an arbitrary object
-            %               
+            %
             % Description:  Inserts the given key-value pair into T
             %--------------------------------------------------------------
             
@@ -114,11 +114,11 @@ classdef RedBlackTree < handle
         function Delete(this,x)
             %------------------------- Delete -----------------------------
             % Syntax:       T.Delete(x);
-            %               
+            %
             % Inputs:       x is a node in T (i.e., an object of type
             %               RBTElement) presumably extracted via a
             %               prior operation on T
-            %               
+            %
             % Description:  Deletes the node x from T
             %--------------------------------------------------------------
             
@@ -168,10 +168,10 @@ classdef RedBlackTree < handle
         function keys = Sort(this)
             %-------------------------- Sort ------------------------------
             % Syntax:       keys = T.Sort();
-            %               
+            %
             % Outputs:      keys is a column vector containing the sorted
             %               (ascending order) keys contained in T
-            %               
+            %
             % Description:  Deletes the node x from T
             %--------------------------------------------------------------
             
@@ -186,11 +186,11 @@ classdef RedBlackTree < handle
         function bool = ContainsKey(this,key)
             %---------------------- ContainsKey ---------------------------
             % Syntax:       bool = T.ContainsKeys(key);
-            %               
+            %
             % Inputs:       key is a numeric key
-            %               
+            %
             % Outputs:      bool = {true,false}
-            %               
+            %
             % Description:  Determines if T contains an element with the
             %               given key
             %--------------------------------------------------------------
@@ -204,13 +204,13 @@ classdef RedBlackTree < handle
         function x = Search(this,key)
             %------------------------- Search -----------------------------
             % Syntax:       x = T.Search(key);
-            %               
+            %
             % Inputs:       key is a numeric key
-            %               
+            %
             % Outputs:      x is a node from T (i.e., an object of class
             %               RBTElement) with the given key, if it exists in
             %               T, and NaN otherwise
-            %               
+            %
             % Description:  Returns node from T with the given key
             %--------------------------------------------------------------
             
@@ -230,10 +230,10 @@ classdef RedBlackTree < handle
         function x = Minimum(this)
             %------------------------- Minimum ----------------------------
             % Syntax:       x = T.Minimum();
-            %               
+            %
             % Outputs:      x is the node from T (i.e., an object of class
             %               RBTElement) with the smallest key
-            %               
+            %
             % Description:  Returns node from T with the smallest key
             %--------------------------------------------------------------
             
@@ -246,13 +246,13 @@ classdef RedBlackTree < handle
         function y = NextSmallest(this,x) %#ok
             %---------------------- NextSmallest --------------------------
             % Syntax:       y = T.NextSmallest(x);
-            %               
+            %
             % Inputs:       x is a node from T (i.e., an object of class
             %               RBTElement)
-            %               
+            %
             % Outputs:      y is the node from T (i.e., an object of class
             %               RBTElement) with the next smallest key than x
-            %               
+            %
             % Description:  Returns node from T with the next smallest key
             %               than the input node
             %--------------------------------------------------------------
@@ -278,10 +278,10 @@ classdef RedBlackTree < handle
         function x = Maximum(this)
             %------------------------- Maximum ----------------------------
             % Syntax:       x = T.Maximum();
-            %               
+            %
             % Outputs:      x is the node from T (i.e., an object of class
             %               RBTElement) with the largest key
-            %               
+            %
             % Description:  Returns node from T with the largest key
             %--------------------------------------------------------------
             
@@ -294,13 +294,13 @@ classdef RedBlackTree < handle
         function y = NextLargest(this,x) %#ok
             %---------------------- NextLargest ---------------------------
             % Syntax:       y = T.NextLargest(x);
-            %               
+            %
             % Inputs:       x is a node from T (i.e., an object of class
             %               RBTElement)
-            %               
+            %
             % Outputs:      y is the node from T (i.e., an object of class
             %               RBTElement) with the next largest key than x
-            %               
+            %
             % Description:  Returns node from T with the next largest key
             %               than the input node
             %--------------------------------------------------------------
@@ -326,12 +326,12 @@ classdef RedBlackTree < handle
         function x = Select(this,i)
             %-------------------------- Select ----------------------------
             % Syntax:       x = T.Select(i);
-            %               
+            %
             % Inputs:       i is a positive integer
-            %               
+            %
             % Outputs:      x is the node from T (i.e., an object of class
             %               RBTElement) with ith smallest key
-            %               
+            %
             % Description:  Returns node from T with the ith smallest key
             %--------------------------------------------------------------
             
@@ -344,13 +344,13 @@ classdef RedBlackTree < handle
         function r = Rank(this,x)
             %--------------------------- Rank -----------------------------
             % Syntax:       r = T.Rank(x);
-            %               
+            %
             % Inputs:       x is the node from T (i.e., an object of class
             %               RBTElement) with ith smallest key
-            %               
+            %
             % Outputs:      r is the postivie integer such that x's key is
             %               the rth smallest in T
-            %               
+            %
             % Description:  Returns the rank of node x in T
             %--------------------------------------------------------------
             
@@ -370,9 +370,9 @@ classdef RedBlackTree < handle
         function count = Count(this)
             %-------------------------- Count -----------------------------
             % Syntax:       count = T.Count();
-            %               
+            %
             % Outputs:      count is the number of nodes in T
-            %               
+            %
             % Description:  Returns number of elements in T
             %--------------------------------------------------------------
             
@@ -385,9 +385,9 @@ classdef RedBlackTree < handle
         function bool = IsEmpty(this)
             %------------------------ IsEmpty -----------------------------
             % Syntax:       bool = T.IsEmpty();
-            %               
+            %
             % Outputs:      bool = {true,false}
-            %               
+            %
             % Description:  Determines if T is empty (i.e., contains zero
             %               elements)
             %--------------------------------------------------------------
@@ -405,7 +405,7 @@ classdef RedBlackTree < handle
         function Clear(this)
             %------------------------- Clear ------------------------------
             % Syntax:       T.Clear();
-            %               
+            %
             % Description:  Removes all elements from T
             %--------------------------------------------------------------
             
